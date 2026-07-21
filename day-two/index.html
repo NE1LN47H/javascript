@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
 </head>
+    <style>
+        .book-card{
+            font-family: 'Times New Roman', Times, serif;
+            margin: auto;
+            text-align: center;
+            background-color: beige;
+            width: 500px;
+            height: 500px
+        }
+    </style>
 <body>
-   
+   <div class="book-card">
+    <p id="title"></p>
+    <p id="summary"></p>
+   </div>
 <script>
     const bookObj = {
         title: "The Alchemist",
@@ -23,7 +36,8 @@ function printBookSummary(bookObj) {
 }
 
 printBookSummary(bookObj);
-
+document.getElementById("title").innerHTML = bookObj.title;
+document.getElementById("summary").innerHTML = bookObj.getSummary();
 </script>
 </body>
 </html>

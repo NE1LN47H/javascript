@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact manager app</title>
+    <style></style>
+</head>
+<body>
+    
+<script>
+    const contact1 = {
+        name: "First User",
+        phonenumber: 987654321,
+        emailaddress: "firstuser@mail.com",
+        getUserInfo: function() {
+           return `INFO -
+             name: ${this.name}
+             phonenumber: ${this.phonenumber}
+             email: ${this.emailaddress}
+            `
+        }
+    }
+
+    const contact2 = {
+        name: "Second User",
+        phonenumber: 987654321,
+        emailaddress: "seconduser@mail.com",
+        getUserInfo: function() {
+           return `INFO -
+             name: ${this.name}
+             phonenumber: ${this.phonenumber}
+             email: ${this.emailaddress}
+            `
+        }
+    }
+
+    function printContactInfo(contact) {
+        console.log(contact.getUserInfo());
+    }
+
+    printContactInfo(contact1);
+    printContactInfo(contact2);
+
+</script>
+</body>
+</html>
