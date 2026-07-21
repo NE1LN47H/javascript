@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sales Calculator</title>
 </head>
 <body>
 
+    <h2>Sales Calculator</h2>
+
+    <label>T-Shirt Count:</label>
+    <input type="number" id="tShirtCount"><br><br>
+
+    <label>T-Shirt Price:</label>
+    <input type="number" id="tShirtPrice"><br><br>
+
+    <label>Cap Count:</label>
+    <input type="number" id="capCount"><br><br>
+
+    <label>Cap Price:</label>
+    <input type="number" id="capPrice"><br><br>
+
+    <button onclick="calculate()">Calculate Total</button>
+
+    <h3 id="result"></h3>
 
     <script>
-        let tShirtCount = 5;
-        let capCount = 3;
-        let tShirtPrice = 400;
-        let capPrice = 150;
+        function calculate() {
+            let tShirtCount = Number(document.getElementById("tShirtCount").value);
+            let tShirtPrice = Number(document.getElementById("tShirtPrice").value);
+            let capCount = Number(document.getElementById("capCount").value);
+            let capPrice = Number(document.getElementById("capPrice").value);
 
-        let totalEarnings = (tShirtCount * tShirtCount) + (capCount * capPrice);
-        console.log("Total Earnings: "+totalEarnings);
+            let totalEarnings = (tShirtCount * tShirtPrice) + (capCount * capPrice);
 
-        console.log("After T-shirt price change");
-        tShirtPrice = 450;
-        totalEarnings = (tShirtCount * tShirtCount) + (capCount * capPrice);
-        console.log("Total Earnings: "+totalEarnings);
-
+            document.getElementById("result").innerHTML =
+                "Total Earnings: ₹" + totalEarnings;
+        }
     </script>
+
 </body>
 </html>
