@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Game</title>
+</head>
+<body>
+    <script>
+        const misteryLevel = Math.floor(Math.random() * 50) + 1;
+        const userScoreString = prompt("Enter a score: ");
+        console.log(`User score string: ${userScoreString}`);
+        const userScore = Number(userScoreString);
+        console.log(`User score converted from string to number: ${userScore}`);
+        const absoluteDifference = Math.round(misteryLevel - userScore);
+        console.log(`The absolute difference of mistery level and user score is: ${absoluteDifference}`);
+        const calculatedUserScore = Math.log(Math.sqrt(userScore));
+        console.log(`The calculated Log of Sqrt of the User score: ${calculatedUserScore}`);
+        const logValueOfPi = Math.log(Math.PI);
+        console.log(`The calculated log value of PI: ${logValueOfPi}`);
+        const implicitValue = "20" * 5;
+        console.log(`The implicit coverted result of "20" * 5: ${implicitValue}`);
+        console.log(`The maximum value: ${Math.max(10,20,misteryLevel)}`);
+        console.log(`The minimum value: ${Math.min(10,20,misteryLevel)}`);
+
+    </script>
+</body>
+</html>
