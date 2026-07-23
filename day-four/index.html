@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Small statistics widget</h1>
+    <div class="result">Random number: <span id="random-number"></span></div>
+    <div class="result">User score as string: <span id="user-score-string"></span></div>
+    <div class="result">User score as number: <span id="user-score-number"></span></div>
+    <div class="result">Difference: <span id="difference"></span></div>
+    <div class="result">Rounded square root: <span id="sqrt-result"></span></div>
+    <div class="result">Pi constant: <span id="pi-value"></span></div>
+    <div class="result">Implicit conversion result: <span id="implicit-result"></span></div>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        console.log(randomNumber);
+        const userScoreString = "75";
+        console.log(userScoreString);
+        const userScore = Number(userScoreString);
+        console.log(userScore);
+        const difference = randomNumber - userScore;
+        console.log(difference);
+        const sqrtResult = Math.sqrt(userScore);
+        console.log(sqrtResult);
+        const piValue = Math.PI;
+        console.log(piValue);
+        const implicitResult = "50" * 2;
+        console.log(implicitResult);
+
+        document.getElementById("random-number").innerHTML = randomNumber;
+        document.getElementById("user-score-string").innerHTML = userScoreString;
+        document.getElementById("user-score-number").innerHTML = userScore;
+        document.getElementById("difference").innerHTML = difference;
+        document.getElementById("sqrt-result").innerHTML = sqrtResult;
+        document.getElementById("pi-value").innerHTML = piValue;
+        document.getElementById("implicit-result").innerHTML = implicitResult;
+
+
+    </script>
+</body>
+</html>

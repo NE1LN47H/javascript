@@ -7,40 +7,56 @@
     <style></style>
 </head>
 <body>
-    
+    <div class="title">
+        <h1>Contact Manager App</h1>
+    </div>
+    <div id="container">
+        <div id="contacts"></div>
+        <button onclick="displayContacts()">Show Contacts</button>
+    </div>
+
 <script>
-    const contact1 = {
-        name: "First User",
-        phonenumber: 987654321,
-        emailaddress: "firstuser@mail.com",
-        getUserInfo: function() {
-           return `INFO -
-             name: ${this.name}
-             phonenumber: ${this.phonenumber}
-             email: ${this.emailaddress}
-            `
-        }
-    }
+const contact1 = {
+    name: "First User",
+    phonenumber: 987654321,
+    emailaddress: "firstuser@mail.com",
 
-    const contact2 = {
-        name: "Second User",
-        phonenumber: 987654321,
-        emailaddress: "seconduser@mail.com",
-        getUserInfo: function() {
-           return `INFO -
-             name: ${this.name}
-             phonenumber: ${this.phonenumber}
-             email: ${this.emailaddress}
-            `
-        }
+    getUserInfo() {
+        return `INFO -
+Name: ${this.name}
+Phone Number: ${this.phonenumber}
+Email: ${this.emailaddress}`;
     }
+};
 
-    function printContactInfo(contact) {
-        console.log(contact.getUserInfo());
+const contact2 = {
+    name: "Second User",
+    phonenumber: 987654321,
+    emailaddress: "seconduser@mail.com",
+
+    getUserInfo() {
+        return `INFO -
+Name: ${this.name}
+Phone Number: ${this.phonenumber}
+Email: ${this.emailaddress}`;
     }
+};
+
+function printContactInfo(contact) {
+    document.getElementById("contacts").innerHTML += `
+        <div class="card">
+            <pre>${contact.getUserInfo()}</pre>
+        </div>
+    `;
+}
+
+function displayContacts() {
+    const container = document.getElementById("contacts");
+    container.innerHTML = "";
 
     printContactInfo(contact1);
     printContactInfo(contact2);
+}
 
 </script>
 </body>
