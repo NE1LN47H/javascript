@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const friend = {
+            name: "Bot",
+            birthDate: "1999-07-05"
+        };
+
+        function getBirthdayDetails() {
+            const dob = new Date(friend.birthDate);
+            const year = dob.getFullYear();
+            const month = dob.getMonth();
+            const day = dob.getDay();
+
+            // console.log(new Date().getFullYear() - year);
+            console.log(day);
+            console.log(typeof(dob));
+            const age = new Date().getFullYear() - year;
+            console.log(age);
+            console.log(`${friend.name} was born on`)
+        }
+
+        getBirthdayDetails();
+
+    </script>
+</body>
+</html>
